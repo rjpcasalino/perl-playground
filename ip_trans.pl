@@ -1,4 +1,4 @@
-#!/usr/bin/evnv perl
+#!/usr/bin/env perl
 # file: ip_trans.pl
 
 use 5.30.1;
