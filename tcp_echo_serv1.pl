@@ -37,7 +37,7 @@ while (1) {
 		chomp;
 
 		my $msg_out = (scalar reverse $_) . "\n";
-		say SESSION $msg_out;
+		print SESSION $msg_out;
 		$bytes_out += length($msg_out);
 	}
 	warn "Connection from [", inet_ntoa($hisaddr), ", $port] done\n";
