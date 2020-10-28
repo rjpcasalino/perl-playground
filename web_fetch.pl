@@ -8,9 +8,9 @@ my $data;
 
 my $url = shift or die "Usage: web_fetch.pl <URL>\n";
 
-my ($host, $path) = $url=~m!^http://([^/]+)(/[^\#]*)! or die "Invalid URL\n";
+my ($host, $path) = $url=~m!^http[s]?://([^/]+)(/[^\#]*)! or die "Invalid URL\n";
 
-my $socket = IO::Socket::INET->new(PeerAddr => $host, PeerPort => 'http(80)') 
+my $socket = IO::Socket::INET->new(PeerAddr => $host, PeerPort => 80)
 	or die "Can't connect: $!";
 
 print $socket "GET $path HTTP/1.0",CRLF,CRLF;
