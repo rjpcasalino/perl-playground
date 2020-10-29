@@ -1,7 +1,7 @@
 { pkgs ? import <nixpkgs> {}
 }:
 pkgs.mkShell {
-  name = "bss";
+  name = "perl-playground";
   buildInputs = [
     pkgs.perl # important!
     pkgs.perlPackages.LWP
