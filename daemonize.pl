@@ -36,5 +36,5 @@ sub daemonize {
 daemonize();
 
 while(1) {
-	say "forever";
+	say "How hard, how hard, how hard do I gotta try?";
 }
