@@ -13,7 +13,7 @@
 #	 And the moon is pale
 #	 We're on the edge of forever
 #	 And we're never gonna fail
-#	 No." - Jim Stienman, "Surf's Up"
+#	 No." - Jim Steinman, "Surf's Up"
 
 use v5.10;
 
