@@ -13,6 +13,7 @@
           buildInputs = [
             pkgs.perl
             pkgs.perlPackages.LWPProtocolHttps
+            pkgs.perlPackages.HTMLTokeParserSimple
           ];
           shellHook = ''
             printf "Welcome to Perl Playground!\n"
