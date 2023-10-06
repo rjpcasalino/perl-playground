@@ -8,14 +8,14 @@ use LWP;
 
 use constant RFCS => 'https://raw.githubusercontent.com/NixOS/rfcs/master/rfcs/';
 
-die "Usage: fetch_nix_rfcs.pl rfc1...\n" unless @ARGV;
+die "Usage: fetch_nix_rfcs.pl 0001-rfc-process...\nGet full list: https://github.com/NixOS/rfcs/tree/master/rfcs\n" unless @ARGV;
 
 my $ua = LWP::UserAgent->new;
 my $new_agent = 'Mozilla/5.0 (' . $ua->agent . ')';
 $ua->agent($new_agent);
 
 while ( defined (my $rfc = shift) ) {
-	my $url = RFCS . $rfc;
+	my $url = RFCS . $rfc . ".md";
 	say "Fetching: $url";
 
 	my $response = $ua->get($url);
