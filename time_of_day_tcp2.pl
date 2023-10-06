@@ -4,7 +4,7 @@
 use v5.10;
 use IO::Socket qw(:DEFAULT :crlf);
 
-my $host = shift || 'localhost';
+my $host = shift || 'time.nist.gov';
 $/ = CRLF;
 
 my $socket = IO::Socket::INET->new("$host:daytime") or die "Can't connect to daytime server @ host: $!";
