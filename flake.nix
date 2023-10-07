@@ -14,6 +14,8 @@
             pkgs.perl
             pkgs.perlPackages.LWPProtocolHttps
             pkgs.perlPackages.HTMLTokeParserSimple
+            pkgs.perlPackages.JSON
+            pkgs.perlPackages.Encode
           ];
           shellHook = ''
             printf "Welcome to Perl Playground!\n"
