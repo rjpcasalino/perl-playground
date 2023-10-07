@@ -34,7 +34,6 @@ while ( my $token = $p->get_token ) {
     }
 }
 my $rfcs = $data->{payload}{tree}{items};
-my $name = "0039-unprivileged-maintainer";
 foreach my $rfc (@$rfcs) {
  my $rfc = Dumper($rfc->{name});
  $Data::Dumper::Terse = 1;
