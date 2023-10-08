@@ -18,7 +18,11 @@
             pkgs.perlPackages.Encode
             pkgs.perlPackages.PerlTidy
           ];
+          # LWP was throwing a warning about multiple shell vars
+          # so shut it up like so:
           shellHook = ''
+            export SHELL=/usr/env/bash
+            unset shell
             printf "Welcome to Perl Playground!\n"
           '';
         };
