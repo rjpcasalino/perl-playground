@@ -26,6 +26,8 @@
       with pkgs; {
         devShell = mkShell {
           buildInputs = [
+            chromedriver
+            lsof
             pkgs.perl
             pkgs.perlPackages.TextCSV
             pkgs.perlPackages.Encode
