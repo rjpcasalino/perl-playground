@@ -2,6 +2,7 @@
 # file: fetch_nix_rfcs.pl
 
 use v5.10;
+use strict;
 use warnings;
 use Data::Dumper;
 use LWP;
@@ -18,6 +19,7 @@ GetOptions(
       rfc
     )
 );
+
 
 use constant RFCS =>
   'https://raw.githubusercontent.com/NixOS/rfcs/master/rfcs/';

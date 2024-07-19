@@ -29,12 +29,14 @@
             chromedriver
             lsof
             pkgs.perl
+            pkgs.perlPackages.DataDumper
             pkgs.perlPackages.TextCSV
             pkgs.perlPackages.Encode
             pkgs.perlPackages.JSON
             pkgs.perlPackages.LWPProtocolHttps
             pkgs.perlPackages.PerlTidy
             pkgs.perlPackages.WebScraper
+            pkgs.perlPackages.HTMLTokeParserSimple
             SeleniumRemoteDriver
           ];
           # LWP was throwing a warning about multiple shell vars
