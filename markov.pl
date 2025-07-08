@@ -1,4 +1,4 @@
-# markov.pl: markov chain alforithm for 2-word prefixes
+# markov.pl: markov chain algorithm for 2-word prefixes
 
 $MAXGEN = 100;
 $NONWORD = "\n";
