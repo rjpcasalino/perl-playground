@@ -1,6 +1,7 @@
 #!/usr/env perl
 # Derived from code by Nathan Torkington
 # also - Jon Orwant, Jarkko Hietaniemi & John Macdonald
+# note: assumes the file contains one word per line, sorted lexicographically
 use v5.10;
 use strict;
 use integer;
