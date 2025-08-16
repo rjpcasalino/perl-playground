@@ -16,6 +16,7 @@ my $script = File::Basename::basename($0);
 my $SELF = catfile($FindBin::Bin, $script);
 
 # POSIX unmasks the sigprocmask properly
+# see: https://theory.uwinnipeg.ca/CPAN/perl/pod/perlipc/handling_the_sighup_signal_in_daemons.html
 my $sigset = POSIX::SigSet->new();
 my $action = POSIX::SigAction->new('sigHUP_handler',
                              $sigset,
