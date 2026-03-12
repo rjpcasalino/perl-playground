@@ -16,6 +16,7 @@ use Getopt::Long;
 my $prefix_size = 2;
 my $max_words   = 100;
 my $NONWORD     = "\n";
+my $DELIMITER   = "\x1C"; # ASCII field separator
 
 GetOptions(
         'n=i' => \$prefix_size,
@@ -31,7 +32,7 @@ my @prefix = ($NONWORD) x $prefix_size;
 
 while (<>) {
         foreach (split) {
-                my $key = join($;, @prefix);
+                my $key = join($DELIMITER, @prefix);
                 push @{$statetab{$key}}, $_;
                 shift @prefix;
                 push @prefix, $_;
@@ -39,13 +40,13 @@ while (<>) {
 }
 
 # Mark the end of input
-my $key = join($;, @prefix);
+my $key = join($DELIMITER, @prefix);
 push @{$statetab{$key}}, $NONWORD;
 
 # Generate output
 @prefix = ($NONWORD) x $prefix_size;
-for my $i (0 .. $max_words - 1) {
-        my $key = join($;, @prefix);
+for (1 .. $max_words) {
+        my $key = join($DELIMITER, @prefix);
         my $suf = $statetab{$key};
         last unless $suf;
         my $r = int(rand @$suf);
