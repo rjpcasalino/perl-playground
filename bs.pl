@@ -48,6 +48,6 @@ sub binary_search {
 
 sub compare {
         my ($word1,$word2) = @_;
-        $word1 =~ s/\W//g; $word = lc($word1);
+        $word1 =~ s/\W//g; $word1 = lc($word1);
         return $word1 cmp $word2;
 }
