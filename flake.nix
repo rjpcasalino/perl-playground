@@ -37,6 +37,7 @@
             pkgs.perlPackages.PerlTidy
             pkgs.perlPackages.WebScraper
             pkgs.perlPackages.HTMLTokeParserSimple
+            pkgs.perlPackages.XMLRSS
             SeleniumRemoteDriver
           ];
           # LWP was throwing a warning about multiple shell vars
